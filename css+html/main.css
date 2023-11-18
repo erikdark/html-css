@@ -1,0 +1,109 @@
+h1 {
+    color: red;
+}
+
+#world {
+    color: rgba(69, 214, 69,0.5);
+}
+
+.dark {
+    color: #dc0055;
+}
+.text {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* name color - red... */
+/* HEX #000 */
+/* rgb(255,255,255) */
+/* rbga(255,255,255,0.1) */
+
+
+/* Селектор { 
+    Свойство: значения;
+} */
+
+/* #id {
+    селектор идентифыикатора
+} */
+
+/* .class {
+    Селектор класса
+} */
+/* h1 {
+    Селектор тега
+} */
+
+button {
+    color: #fff;
+    background-color: #000;
+}
+button:hover {
+    background-color: #fff;
+    color: #000;
+}
+.container {
+    padding: 50px;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    background-color: #816c6c;
+}
+.test-button {
+    border: 2px solid #fff;
+    padding: 20px 100px 20px 100px;
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 17px;
+    
+}
+
+.test-button:hover {
+    border: 2px solid #f2c94c;
+}
+
+.container img{
+    margin-top: 100px;
+}
+
+.image {
+    margin-top: 50px;
+    width: 259px;
+    height: 156px;
+    background: url(1.png);
+}
+.image:hover {
+    background: url(2.png);
+    
+}
+.block, .block1 {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+}
+
+.block1 {
+    margin-top: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    border-top: 2px solid red;
+    padding-right: 20px;
+}
+li:nth-child(5) {
+    padding-right: 0;
+}
+
+h1 {
+    margin-bottom: 44px;
+}
+
+
