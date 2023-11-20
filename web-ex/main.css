@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(5, 7, 41) url(img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover  ;
+}
+
+.wrapper {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.aside-block {
+    box-sizing: border-box;
+    width: 350px;
+    background: rgba(11,11,13,0.4);
+    text-align: center;
+    padding: 70px 50px 100px 50px;
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 7px;
+}
+
+.active {
+    color: blueviolet;
+}
+.aside-block .active:hover {
+    color: blueviolet;
+}
+
+.aside-block ul {
+    list-style-type: none;
+}
+.aside-block li {
+    padding-top: 40px;
+}
+.aside-block li:hover {
+    color: #F2C94C;
+}
+
+.main {
+    width: 1090px;
+    position: relative;
+}
+.portfolio-container {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.portfolio-container h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    gap: 100px 100px;
+    justify-content: center;
+}
+
+
+.social-block {
+    position: absolute;
+    background-color: #a276ff;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    right: 0;
+}
