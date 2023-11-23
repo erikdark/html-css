@@ -79,3 +79,13 @@ body {
     border-bottom-right-radius: 15px;
     right: 0;
 }
+
+.info a {
+    border: 2px solid #fff;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.info a:hover {
+    border:2px solid #F2C94C;
+}
