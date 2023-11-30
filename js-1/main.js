@@ -300,3 +300,163 @@
 //     }
 // }
 // console.log(count)
+
+
+
+
+// Конструкция switch case
+
+// let a = prompt('string')
+// console.log(typeof(a))
+
+// switch(a) {
+//     case 3:
+//         alert('Не угарадл, слишком мало');
+//         break;
+//     case 6:
+//         alert('Все равно мало');
+//         break;
+//     case 8:
+//         alert('Угадал');
+//         break;
+//     default:
+//         alert('такого нет в игре')
+// }
+
+
+// let a = 10
+// switch(a) {
+//     case 4:
+//         alert()
+//         break
+//     case 6:
+//     case 8:
+//         alert('error')
+//         break
+// }   
+
+
+
+//     if (day == 1) {
+//         return 'понедельник'
+//     }else if (day ==2) {
+//         return 'Вторник'
+//     }else if (day ==3) {
+//         return 'Среда'
+//     }else if (day ==4) {
+//         return 'Четверг'
+//     }else if (day ==5) {
+//         return 'Пятница'
+//     }else if (day ==6) {
+//         return 'Суббота'
+//     }else if (day ==7) {
+//         return 'Воскресенье'
+//     }else {
+//         return 'не коректное значение'
+//     }
+
+// switch (day) {
+//     case 1:
+//         return 'понедельник'
+//     case 2:
+//         return 'вторник'
+//     case 3:
+//         return 'Среда'
+//     ...
+//     default:
+//         return 'Некоректное значение'
+// }
+
+// switch(action) {
+//     case 'login':
+//         // выполнит вход в систему
+//         break
+//     case 'logout':
+//         //выйти из системы
+//         break
+//     case 'create':
+//         //создание нового элемента
+//         break
+//     default:
+//         //обрабатываем другие сценарии.
+    
+// }
+
+
+// function имя(параметр) {
+//     //Тело функции
+// }
+// имя()
+
+
+// function showmMessage() {
+//     alert('hello world')
+// }
+// showmMessage()
+
+// let user = 'erik'
+// function showmMessage() {
+//     user = 'Masha'
+//     let message = 'hello    ' + user
+//     alert(message)
+// }
+// showmMessage()
+
+// function showmMessage() {
+//     let message = 'Hello'
+//     alert(message)
+// }
+// showmMessage();
+
+// function showmMessage(from, text){
+//     alert(from + ': ' + text)
+// }
+// showmMessage('Erik', 'Когда отправите html/css работу на проверку?)')
+
+
+// Задача 1 Функция проверки на четность.
+
+// function isEven(num) {
+//     return num % 2 ===0;
+// }
+// console.log(isEven(4))
+// console.log(isEven(5))
+// console.log(isEven(6))
+// console.log(isEven(7))
+
+// document.getElementById("myButton").addEventListener("click", function() {
+//     document.getElementById("output").innerText = 'Hello World'
+// });
+
+
+
+// let button = document.getElementById("myButton")
+// let output = document.getElementById("output")
+// let isTextVisible = false
+
+
+// button.addEventListener("click",
+// function() {
+//     if (isTextVisible) {
+//         output.style.display ="none"
+//         isTextVisible = false
+//     }else {
+//         output.innerText = "Hello world"
+//         output.style.display = "block"
+//         isTextVisible = true
+//     }
+// })
+
+// let button = document.getElementById("myButton")
+// let output = document.getElementById("output")
+
+// button.addEventListener("click",
+// function() {
+//     if (output.style.display === "none" || output.innerText === "") {
+//         output.innerText = "hello"
+//         output.style.display = "block"
+//     }else {
+//         output.style.display = "none"
+//     }
+// })
+
