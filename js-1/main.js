@@ -460,3 +460,188 @@
 //     }
 // })
 
+// function имя (параметры) {
+//     тело функции(любые выражени/команды)
+// }
+
+// function showmMessage(email, paswword) {
+//     alert(from + text)
+// }
+// showmMessage('erik', 'hello world')
+
+// function calccheckbuy(purchases) {
+//     let totalAmout = 0
+//     for (let i  = 0; i < purchases.length;i++) {
+//         totalAmout  += purchases[i]
+//     }
+//     const average = totalAmout / purchases.length
+//     return average.toFixed(2)
+// }
+
+// const purchases = [150,200,300,100,500,10]
+// const averagePurchases = calccheckbuy(purchases)
+// console.log(averagePurchases)
+
+
+// Сумму элементов в массиве + найти среднее значение
+
+// function sumArr(arr) {
+//     return arr.reduce((acc, curr) => acc + curr, 0)
+// }
+
+// function findAverage(arr) {
+//     const sum = sumArr(arr)
+//     return sum / arr.length
+// }
+
+
+// const someNumbers = [34, 35, 49, 38, 17, 46]
+// const totalsum = sumArr(someNumbers)
+// const averageValue = findAverage(someNumbers)
+// console.log(totalsum)
+// console.log(averageValue)
+
+
+// function one() {
+//     setTimeout( function(){
+//         console.log(1)
+//     },500)
+//     console.log('one')
+// }
+
+// function two() {
+//     console.log('two')
+// }
+// one()
+// two()
+
+// one main.js
+// two main.js
+// 1
+
+// let a = function () {
+//     console.log('hi')
+// }
+// a()
+
+// let a = function Erik() {
+//     console.log('hi')
+// }
+// a()
+
+
+// let a = function () {
+//     console.log()
+// }
+
+// let a = () => console.log('hi')
+// a()
+
+// let  a  = () =>  {
+//     let b = 13;
+//     let c = 20;
+//     return b + c
+// }
+// console.log(a())
+
+
+// function SumCalc(a,b) {
+//     return a+b
+// }
+
+// console.log(SumCalc(12,24))
+
+
+
+// let a = document.getElementById('one')
+// a.style.background = "red"
+// let a = document.querySelector('#one')
+// a.style.background = "red"
+// let a = document.querySelectorAll('li')
+// let b = a[2]
+// b.style.color = "red"
+// let a = document.querySelector('ul')
+// a.style.color = "red"
+// let a = document.querySelectorAll('li')
+// a.forEach(function(i) {
+//     i.style.color = "red"
+// })
+// let a = document.querySelector("#one")
+// console.log(a.textContent.length)
+// элемент.обращение/значение
+
+// let a = document.createElement('div')
+// let txt = document.createTextNode('Hello World')
+// a.appendChild(txt)
+// document.body.appendChild(a)
+
+
+// const btn = document.getElementById('btn')
+// btn.addEventListener("click",
+// function() {
+//     createsquare()
+// })
+
+// function createsquare() {
+//     const square = document.createElement("div")
+//     square.className = "square"
+//     document.body.appendChild(square)
+//     const mxWidth = window.innerWidth - square.offsetWidth
+//     const ranomX = Math.floor(Math.random() * mxWidth)
+//     square.style.left  = ranomX + "px"
+
+
+//     const gravity = 10
+//     const intervalVelocity = 100
+//     const timeInc = 0.001
+//     let currPosition = 0
+//     let currVelocity = intervalVelocity
+
+
+//     const  animation = setInterval(function(){
+//         currVelocity += gravity + timeInc
+//         currPosition += currVelocity + timeInc
+
+//         if (currPosition >= window.innerHeight - square.offsetHeight) {
+//             clearInterval(animation)
+//             square.style.buttom = "0"
+//             square.addEventListener("click", function(){
+//                 square.classList.add("poof")
+//                 setTimeout( function() {
+//                     document.body.removeChild(square)
+//                 }, 500);
+//             });
+//         }else {
+//             square.style.top  = currPosition + "px"
+//             handcoliision(square)
+//         }
+//     },timeInc * 1000)
+// }
+
+// function handcoliision(square) {
+//     const squares = document.getElementsByClassName("square")
+//     Array.from(squares).forEach((othersquare) => {
+//         if (othersquare !== square && isColl(square, othersquare)) {
+//             const squareBot = square.offsetTop  + square.offsetHeight
+//             const otherSquareTop = othersquare.offsetTop
+//             if (squareBot > otherSquareTop) {
+//                 const newTop = otherSquareTop - square.offsetHeight
+//                 square.style.top = newTop + "px"
+//             }
+//         }
+//     })
+// }
+
+// function backspace() {
+//     let display = document.getElementById('display')
+//     display.value = display.value.slice(0, -1)
+// }
+
+
+let int1 = document.querySelector("#inp1").value
+console.log(int1)
+console.log(typeof(int1))
+
+function sum(int1, int2) {
+    return int1 + int2
+}
