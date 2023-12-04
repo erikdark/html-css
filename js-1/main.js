@@ -638,10 +638,119 @@
 // }
 
 
-let int1 = document.querySelector("#inp1").value
-console.log(int1)
-console.log(typeof(int1))
+// let int1 = document.querySelector("#inp1").value
+// console.log(int1)
+// console.log(typeof(int1))
 
-function sum(int1, int2) {
-    return int1 + int2
-}
+// function sum(int1, int2) {
+//     return int1 + int2
+// }
+
+
+// let btn = document.querySelector(".no-active")
+// btn.addEventListener("click", function() {
+//     btn.classList.toggle('active') 
+// })
+
+// const btn = document.querySelectorAll('button')
+// let input = document.getElementById("display")
+// btn.forEach(button  => {
+//     button.addEventListener("click", function() {
+//         const value = this.getAttribute('data-value')
+//         input.value += value
+//     })
+// })
+
+// document.querySelectorAll('button').forEach(button => button.addEventListener("click", event => document.getElementById("display").value  += event.target.value))
+
+// let user = {
+//     name: 'ERik',
+//     age: 27
+// }
+
+// function hi() {
+//     alert('hi')
+// }
+// user.hi = hi
+// user.hi()
+
+// let user = {
+//     name: 'ERik',
+//     age: 27,
+
+//     hi() {
+//         alert(this.name)
+//     }
+// }
+// user.hi()
+
+
+// Event.TARGET IN JS
+// ссылка на элемент, который является источником события
+
+// const button = document.querySelector('button')
+// button.addEventListener("click", function(event) {
+//     console.log(event.target)
+// })
+
+// event.target - вслучае всплытия событий, event.target будет указывать на элемент, на котором произошло событие, но если есть вложенные элементы, то они будут ссылаться на родительский. 
+
+// event.currentTarget - невелирует то что проиходит сверху при вложенных элементах . Потому что всегда будет ссылаться на элемент на котором находится обработчик.
+
+
+// MODAL WINDOW
+
+// function openModal() {
+//     document.getElementById('myMolda').style.display = "block"
+// }
+// function closeModal() {
+//     document.getElementById('myMolda').style.display = "none"
+// }
+
+// window.onclick = function(event) {
+//     const modal = document.getElementById('myMolda')
+//     if (event.target == modal) {
+//         modal.style.display = "none"
+//     }
+// }
+
+// как получить в переменную test 0 ?
+// let test = Number('ddd');
+// console.log(typeof(test)) 
+// console.log(test + 7)
+
+// в php при приведении строки к числу получается 0, есть ли аналог в js
+
+
+// undefined - фтулка от бумаги
+// null - ни бумаги ни фтулки 
+// NaN - НЕ ЧИСЛО
+
+// let test = 'ddd';
+// let sum = +test || 0
+// console.log(sum)
+
+// let num = isNaN(test)?0:+test
+// console.log(num)
+
+// function changeImage() {
+//     const  image = document.getElementById('myImg')
+//     image.src = "https://img1.akspic.ru/attachments/crops/1/9/4/4/94491/94491-dikaya_koshka-zhivaya_priroda-koshki_malogo_i_srednego_razmera-bakenbardy-usy-2560x1440.jpg"
+// }
+
+// const  image = document.querySelector('.image-container img')
+// const overlay = document.querySelector('.image-overlay')
+// overlay.addEventListener('mouseover', function() {
+//     image.src = "https://img1.akspic.ru/attachments/crops/1/9/4/4/94491/94491-dikaya_koshka-zhivaya_priroda-koshki_malogo_i_srednego_razmera-bakenbardy-usy-2560x1440.jpg"
+// })
+// overlay.addEventListener('mouseout', function() {
+//     image.src = "https://sun9-71.userapi.com/OTiA9MicXLXEjC5y70k1AJXmgKwuYxS6Q7nAVw/65Ao8mJKiH0.jpg"
+// })
+
+// const image = document.querySelector("img")
+// image.addEventListener('mouseover', function() {
+//     image.src = "https://img1.akspic.ru/attachments/crops/1/9/4/4/94491/94491-dikaya_koshka-zhivaya_priroda-koshki_malogo_i_srednego_razmera-bakenbardy-usy-2560x1440.jpg"
+// })
+// image.addEventListener('mouseout', function(){
+//     image.src = "https://sun9-71.userapi.com/OTiA9MicXLXEjC5y70k1AJXmgKwuYxS6Q7nAVw/65Ao8mJKiH0.jpg"
+// })
