@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>
+            Katalog
+        </h1>
+        <div>
+            <label for="productName">Название товара:</label>
+            <input type="text" id="productName" v-model="newProduct">
+            <button @click="addProduct">Dobavit</button>
+        </div>
+        <ul>
+            <li v-for="(product, index) in products">{{product}}
+                <button @click="removeProduct(index)">Delete</button>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                newProduct: '',
+                products: []
+            },
+            methods: {
+                addProduct() {
+                    if (this.newProduct.trim() !== ''){
+                        this.products.push(this.newProduct)
+                        this.newProduct = ''
+                    }
+                },
+                removeProduct(index) {
+                    this.products.splice(index, 1)
+                }
+            },
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+</head>
+<body>
+
+<div id="app">
+    <p>{{message}}</p>
+    <p>Попыток: {{attempts}}</p>
+    <button @click="startGame">Game</button>
+    <label for="guess">Ваш вариант:</label>
+    <input type="number" id="guess" v-model.number="userGuess">
+    <button @click="makeGuess">Submit</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    secretNumber: 0,
+    userGuess: null,
+    message: 'Угадай число от 1 до 10',
+    gameOver: false,
+    attempts: 0, 
+  },
+  methods: {
+    startGame() {
+      this.secretNumber = Math.floor(Math.random() * 10) + 1;
+      this.userGuess = null;
+      this.message  = 'Угадай число от 1 до 10';
+      this.gameOver = false;
+      this.attempts = 0;
+    },
+    makeGuess() {
+      if (this.userGuess === null || isNaN(this.userGuess) || this.userGuess < 1 || this.userGuess > 10) {
+        this.message = 'Пожалуйста, введите число от 1 до 10';
+        return;
+      }
+
+      this.attempts++;
+
+      if (this.userGuess == this.secretNumber) {
+        this.message = `Поздравляю, ответ ${this.secretNumber}`;
+        this.gameOver = true;
+      } else {
+        this.message = 'Давай еще раз';
+      }
+    }
+  },
+});
+</script>
+
+</body>
+</html>

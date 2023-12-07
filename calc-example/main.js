@@ -26,3 +26,16 @@ function addInputResult() {
 //     input.value = res
 //     curInput = res
 // }
+
+// СОХРАНЕНИЕ В ПАМЯТЬ
+// let memory = 0
+// function addMemory() {
+//     memory += parseFloat(input.value) || 0
+//  }
+
+// function retMemory() {
+//     curInput += memory
+//     input.value- curInput
+// }
+
+

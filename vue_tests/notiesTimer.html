@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Timer</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Напоминалка</h1>
+        <label for="task">Задача:</label>
+        <input type="text" v-model="task" id="task">
+        <label for="time">Время (в минутах)</label>
+        <input type="number" v-model="time" id="time">
+        <button @click="startTimer" :disabled="timerActive">Запуск таймера</button>
+        <div v-if="timerActive">
+            <p>Осталось времени {{ remainingTime }}</p>
+            <button @click="stopTimer">Остановить таймер</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                task: '',
+                time: 0,
+                timerActive: false,
+                remainingTime: 0,
+                timeInterval: null,
+            },
+            methods: {
+                startTimer() {
+                    if (this.time <= 0 || this.timerActive) return;
+
+                    this.remainingTime = this.time * 60;
+                    this.timerActive = true;
+
+                    this.timeInterval = setInterval(() => {
+                        if (this.remainingTime > 0){
+                            this.remainingTime--;
+                        } else {
+                            this.stopTimer();
+                            alert(`Время для задачи ${this.task} истекло`);
+                        }
+                    }, 1000);
+                },
+                stopTimer() {
+                    clearInterval(this.timeInterval);
+                    this.timerActive = false;
+                    this.remainingTime = 0;
+                }
+            },
+        })
+    </script>
+</body>
+</html>
