@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example-calc</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="desktop">
+            <input type="text" id="input" readonly>
+        </div>
+        <br>
+        <div class="buttons">
+            <button onclick="addInput('1')">1</button>
+            <button onclick="addInput('2')">2</button>
+            <button onclick="addInput('3')">3</button>
+            <button onclick="appOper('+')">+</button>
+        </div>
+        <div class="buttons">
+            <button onclick="addInput('4')">4</button>
+            <button onclick="addInput('5')">5</button>
+            <button onclick="addInput('6')">6</button>
+            <button onclick="appOper('-')">-</button>
+        </div>
+        <div class="buttons">
+            <button onclick="addInput('7')">7</button>
+            <button onclick="addInput('8')">8</button>
+            <button onclick="addInput('9')">9</button>
+            <button onclick="appOper('*')">*</button>
+        </div>
+        <div class="buttons">
+            <button onclick="addInput('0')">0</button>
+            <button onclick="addInputClear()">C</button>
+            <button onclick="addInputResult('=')">=</button>
+            <button onclick="appOper('/')">/</button>
+        </div>
+    </div>
+
+    
+    <script src="main.js"></script>
+</body>
+</html>
