@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .parallax {
+        height: 100vh;
+        perspective: 1px;
+        overflow: hidden;
+    }
+    .parallax-layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .parallax-back{ 
+        transform: translateZ(-1px) scale(2);
+    }
+    .parallax-front {
+        transform: translateZ(0);
+        display: flex;
+        justify-content: center;
+        height: 100%;
+
+    }
+    .content {
+        color: #fff;
+        text-align: center;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+<body>
+    <div class="parallax">
+        <div class="parallax-back parallax-layer">
+            <img src="https://catherineasquithgallery.com/uploads/posts/2021-02/1614281525_9-p-chernii-fon-zloi-11.jpg" alt="">
+        </div>
+        <div class="parallax-front">
+            <div class="content">
+                <h1>welcome my site</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facilis accusantium nemo deleniti possimus reprehenderit recusandae quibusdam illum expedita, veritatis iusto neque vitae. Rerum amet modi, sapiente exercitationem veniam doloribus.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('scroll', function(event) {
+            let depth, layermovment
+            let scrollTop = window.pageYOffset
+
+            document.querySelectorAll('.parallax-layer').forEach(function(layer) {
+                depth = layer.getAttribute('data-depth')
+                layermovment = -(scrollTop * depth)
+                layer.style.transform = `translateY${layermovment}px`
+            })
+        })
+    </script>
+</body>
+</html>

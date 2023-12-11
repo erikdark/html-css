@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<style>
+        .container {
+            text-align: center;
+            width: 1100px;
+            margin: 0 auto;
+        }
+</style>
+<body>
+    <div class="container">
+        <h1>Форма обртаной связи</h1>
+        <form action="http://test.easysmarthub.ru/main.php" method="post">
+           <input type="text" name="name" placeholder="Введите имя:" required>
+           <br>
+           <input type="email" name="email" placeholder="Введите почту:" required>
+           <br>
+           <input type="text" name="header" placeholder="Введите текст заголовка" required>
+           <br>
+           <textarea name="message" id="" cols="30" rows="10"></textarea>
+           <br>
+           <button type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>
